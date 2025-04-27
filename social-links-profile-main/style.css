@@ -1,10 +1,11 @@
 /* style vars */
 :root {
-  --Green: hsl(75, 94%, 57%);
-  --White: hsl(0, 0%, 100%);
-  --Grey-700: hsl(0, 0%, 20%);
-  --Grey-800: hsl(0, 0%, 12%);
-  --Grey-900: hsl(0, 0%, 8%);
+  --font-size:14px;
+  --color-Green: hsl(75, 94%, 57%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-Grey-700: hsl(0, 0%, 20%);
+  --color-Grey-800: hsl(0, 0%, 12%);
+  --color-Grey-900: hsl(0, 0%, 8%);
 }
 
 /* reset styles */
@@ -16,10 +17,92 @@
   box-sizing: border-box;
 }
 
+/* body styles */
+/* font imports */
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-Grey-900);
+    color: var(--color-White);
+}
+
+/* content wrapper */
+
+.wrapper{
+    width: 35vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem ;
+    
+    background-color: var(--color-Grey-800);
+}
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*horizontal*/
+    align-items: center;/*vertical*/
+    
+}
+.about-me *{
+    margin-bottom: 1rem;
+}
+
+/* avatar */
+
+.profile-avatar{
+    width: 8em;
+    height: auto;
+    margin: 0 auto 1.5em;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+/* about me text */
+
+h1,
+.location,
+.cite{
+    text-align: center;   
+}
+h1{
+    font-size: 2rem;
+}
+
+.location{
+    font-size: 1rem;
+    color: var(--color-Green);
+}
 
 
+/* contact links */
+.social-links{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
 
+.social-links li{
+    border-radius: 0.5em;
+    padding: 0.8em 1em;
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--color-Grey-700);
+    cursor: pointer;
+}
 
+@media (max-width:500px) {
+    /* styles for small and medium screens of 768px or letter */
+    .wrapper{
+        width: 85vw;
+    }
+}
 
 /* attribution */
 .attribution {
