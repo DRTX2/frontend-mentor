@@ -97,6 +97,11 @@ h1{
     cursor: pointer;
 }
 
+.social-links li:hover{
+    background-color: var(--color-Green);
+    color: var(--color-Grey-900);
+}
+
 @media (max-width:500px) {
     /* styles for small and medium screens of 768px or letter */
     .wrapper{
