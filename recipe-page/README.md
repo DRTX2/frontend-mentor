@@ -22,7 +22,7 @@ El objetivo fue construir una página de receta siguiendo un diseño dado, enfoc
 ## 🔗 Deploy
 
 Puedes ver el proyecto en vivo aquí:  
-[🔗 Enlace al proyecto desplegado](#)
+[🔗 Enlace al proyecto desplegado](https://drtx2.github.io/frontend-mentor/recipe-page/)
 
 ## 📚 Aprendizajes
 
