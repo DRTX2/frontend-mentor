@@ -80,6 +80,20 @@ body{
     align-items: center;
 }
 
+.circle-item:hover{
+    background-color: var(--color-orange-500);
+}
+
+.circle-item.selected{
+    background-color: var(--color-white);
+}
+
+.circle-item:hover,
+.circle-item.selected{
+    
+    color: initial;
+}
+
 /* button */
 
 .send-rate{
