@@ -45,6 +45,7 @@ body {
   margin: 0 auto;
   /* push footer to the end */
   padding: 2rem;
+  max-width: 25rem;
 }
 
 /* sections separation */
@@ -153,3 +154,5 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* just use max-width instead of media querys */
