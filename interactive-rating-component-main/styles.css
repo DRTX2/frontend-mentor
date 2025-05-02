@@ -1,0 +1,158 @@
+/* vars */
+:root {
+  --primary-font: "Overpass";
+  --secondary-font: sans-serif;
+  --color-orange-500: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 100%, 100%);
+  --color-grey-500: hsl(217, 12%, 63%);
+  --color-grey-900: hsl(213, 19%, 18%);
+  --color-grey-950: hsl(216, 12%, 8%);
+  --color-mixed: color-mix(
+    in srgb,
+    var(--color-grey-900) 70%,
+    var(--color-white) 10%
+  );
+}
+
+/* format */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body styles */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center; /* horizontal */
+  background-color: var(--color-grey-950);
+  font-family: var(--font), var(--secondary-font);
+}
+
+/* card */
+.card {
+  width: 90vw;
+  border-radius: 1em;
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-500);
+  margin: 0 auto;
+  /* push footer to the end */
+  padding: 2rem;
+  max-width: 25rem;
+}
+
+/* sections separation */
+
+.how,
+.thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* titles */
+.title {
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+/* items list */
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/* circle-items */
+
+.circle-item {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-mixed);
+  color: var(--color-white);
+  /*      horizontal and vertizal scrolling , blur and shadow color  */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-item:hover {
+  background-color: var(--color-orange-500);
+}
+
+.circle-item.selected {
+  background-color: var(--color-white);
+}
+
+.circle-item:hover,
+.circle-item.selected {
+  color: initial;
+}
+
+/* button */
+
+.send-rate {
+  width: 100%;
+  border: none;
+  border-radius: 1em;
+  padding: 0.7em 0;
+  margin: 0;
+  background-color: var(--color-orange-500);
+  color: var(--color-grey-950);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* thanks section */
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.rate-selected {
+  /* display: inline-block; */
+  color: var(--color-orange-500);
+  background-color: var(--color-mixed);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}
+
+/* javascript activations */
+.how.active {
+  display: none;
+}
+
+.thanks.active {
+  display: none;
+}
+
+/* attributions */
+.attribution {
+  position: absolute;
+  width: 100vw;
+  bottom: 2rem;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* just use max-width instead of media querys */

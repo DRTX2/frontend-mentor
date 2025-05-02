@@ -22,12 +22,17 @@
   box-sizing: border-box;
 }
 
-
 /* body styles */
 
 body {
+  font-family: "Outfit", sans-serif;
   background-color: var(--Stone-100);
   color: var(--Stone-600);
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
 }
 
 .recipe {
@@ -81,7 +86,7 @@ img {
 .ingredients ul li,
 .instructions ol li,
 .preparation li {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 .preparation ul li::marker {
@@ -100,7 +105,6 @@ h2 {
 .ingredients {
   padding-left: 1em;
 }
-
 
 .instructions {
   border-top: thin solid var(--Stone-150);
@@ -152,20 +156,48 @@ h1,
 }
 
 /* mobile designs */
+/* cada @media añade o quita estilos al crecer */
+/* 
+Orden típico Mobile First (de menor a mayor):
 
-@media (max-width: 375px) {
+  Base (sin media query) → móviles pequeños (~320–480px)
+  @media (min-width: 480px) → móviles grandes
+  @media (min-width: 768px) → tablets
+  @media (min-width: 1024px) → laptops
+  @media (min-width: 1200px) → desktops
+  @media (min-width: 1440px) → pantallas grandes
+
+🔁 Orden típico Desktop First:
+  Base (≥1024px): escritorio/laptop
+
+  @media (max-width: 1024px) → tablets
+
+  @media (max-width: 768px) → móviles grandes
+
+  @media (max-width: 480px) → móviles pequeños
+
+*/
+@media (max-width: 480px) { /* 768px>=*/
+  
   .recipe {
     width: 100vw;
-    margin:0;
+    margin: 0;
     padding: 0;
   }
+  
   .recipe,
-  img{
+  img {
     border-radius: 0;
   }
-  .recipe article{
-    width:85%;
+  
+  .recipe article {
+    width: 85%;
     margin: 0 auto;
   }
+}
 
+@media (max-width:768px){
+  .recipe{
+    width: 85vw;
+  }
 }
